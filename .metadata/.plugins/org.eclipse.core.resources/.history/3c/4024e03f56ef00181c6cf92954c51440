@@ -1,0 +1,108 @@
+import lejos.hardware.Button;
+import lejos.hardware.Sound;
+import lejos.hardware.ev3.LocalEV3;
+import lejos.hardware.motor.Motor;
+import lejos.hardware.port.Port;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.hardware.sensor.SensorMode;
+import lejos.robotics.RegulatedMotor;
+import lejos.utility.Delay;
+import lejos.hardware.lcd.LCD;
+
+public class cowdog {
+	//                             0       1       2       3       4       5       6       7       8       9
+	//                             A C D   A C D   A C D   A C D   A C D   A C D   A C D   A C D   A C D   A C D   
+	public static int[][] angles={{0,0,0},{0,0,45},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0},{0,0,0}};
+ 	
+	public static void main(String[] args){
+		
+		press(0);
+		press(1);
+		press(2);
+		press(3);
+		press(4);
+		press(5);
+		press(6);
+		press(7);
+		press(8);
+		press(9);
+	}
+	
+	public static void press(int keyCode){
+		LCD.drawInt(keyCode, 0, 0);
+		slowRotateDTo(angles[keyCode][2]);
+		slowRotateCTo(angles[keyCode][1]);
+		slowRotateATo(angles[keyCode][0]);
+		Delay.msDelay(1000);
+	}
+	
+	public static void slowRotateATo(int angle){
+		if(angle>0){
+			while(angle>0){
+				int move = 1;
+				Motor.A.rotate(move);
+				angle=angle-move;
+			}
+		}
+		if(angle<0){
+			while(angle<0){
+				int move = -1;
+				Motor.A.rotate(move);
+				angle=angle+move;
+			}
+		}
+	}
+	
+	public static void slowRotateBTo(int angle){
+		if(angle>0){
+			while(angle>0){
+				int move = 1;
+				Motor.B.rotate(move);
+				angle=angle-move;
+			}
+		}
+		if(angle<0){
+			while(angle<0){
+				int move = -1;
+				Motor.B.rotate(move);
+				angle=angle+move;
+			}
+		}
+	}
+	
+	public static void slowRotateCTo(int angle){
+		if(angle>0){
+			while(angle>0){
+				int move = 1;
+				Motor.C.rotate(move);
+				angle=angle-move;
+			}
+		}
+		if(angle<0){
+			while(angle<0){
+				int move = -1;
+				Motor.C.rotate(move);
+				angle=angle+move;
+			}
+		}
+	}
+	
+	public static void slowRotateDTo(int angle){
+		if(angle>0){
+			while(angle>0){
+				int move = 1;
+				Motor.D.rotate(move);
+				angle=angle-move;
+			}
+		}
+		if(angle<0){
+			while(angle<0){
+				int move = -1;
+				Motor.D.rotate(move);
+				angle=angle+move;
+			}
+		}
+	}
+	
+}

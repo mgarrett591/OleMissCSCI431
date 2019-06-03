@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.SensorMode"/>
+<fullyQualifiedTypeName name="lejos.utility.Delay"/>
+<fullyQualifiedTypeName name="lejos.hardware.ev3.LocalEV3"/>
+<fullyQualifiedTypeName name="lejos.hardware.port.Port"/>
+<fullyQualifiedTypeName name="lejos.hardware.Sound"/>
+<fullyQualifiedTypeName name="lejos.hardware.lcd.LCD"/>
+<fullyQualifiedTypeName name="lejos.hardware.motor.Motor"/>
+<fullyQualifiedTypeName name="lejos.hardware.port.MotorPort"/>
+<fullyQualifiedTypeName name="lejos.robotics.RegulatedMotor"/>
+<fullyQualifiedTypeName name="lejos.hardware.Bluetooth"/>
+<fullyQualifiedTypeName name="lejos.hardware.sensor.MindsensorsAbsoluteIMU"/>
+<fullyQualifiedTypeName name="lejos.hardware.Button"/>
+<fullyQualifiedTypeName name="java.nio.FloatBuffer"/>
+<fullyQualifiedTypeName name="lejos.utility.Stopwatch"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="AltSudukoSolver.Pa"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="cowdog"/>
+</qualifiedTypeNameHistroy>

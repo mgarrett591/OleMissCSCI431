@@ -1,0 +1,14 @@
+import lejos.hardware.sensor.*;
+import lejos.hardware.ev3.LocalEV3;
+import lejos.hardware.port.*;
+
+public class Touch {
+ 
+	public static void main(String[] args){
+		Port port = LocalEV3.get().getPort("S1");
+		EV3TouchSensor touch = new EV3TouchSensor(port);
+		SensorMode touchprovider = (SensorMode) touch.getTouchMode();
+		float[] sample = new float[touch.sampleSize()];
+		touchprovider.fetchSample(sample, 0);
+	}
+}

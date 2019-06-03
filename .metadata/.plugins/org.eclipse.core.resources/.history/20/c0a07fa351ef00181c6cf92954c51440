@@ -1,0 +1,89 @@
+import lejos.hardware.Button;
+import lejos.hardware.Sound;
+import lejos.hardware.ev3.LocalEV3;
+import lejos.hardware.motor.Motor;
+import lejos.hardware.port.Port;
+import lejos.hardware.sensor.EV3TouchSensor;
+import lejos.hardware.sensor.EV3UltrasonicSensor;
+import lejos.hardware.sensor.SensorMode;
+import lejos.robotics.RegulatedMotor;
+import lejos.utility.Delay;
+import lejos.hardware.lcd.LCD;
+
+public class cowdog {
+ 	
+	public static void main(String[] args){
+		
+		slowRotateATo(30);
+		Motor.C.rotate(30);
+		slowRotateDTo(30);
+	}
+	
+	public static void slowRotateATo(int angle){
+		if(angle>0){
+			while(angle>0){
+				int move = 1;
+				Motor.A.rotate(move);
+				angle=angle-move;
+			}
+		}
+		if(angle<0){
+			while(angle<0){
+				int move = -1;
+				Motor.A.rotate(move);
+				angle=angle+move;
+			}
+		}
+	}
+	
+	public static void slowRotateBTo(int angle){
+		if(angle>0){
+			while(angle>0){
+				int move = 1;
+				Motor.B.rotate(move);
+				angle=angle-move;
+			}
+		}
+		if(angle<0){
+			while(angle<0){
+				int move = -1;
+				Motor.B.rotate(move);
+				angle=angle+move;
+			}
+		}
+	}
+	
+	public static void slowRotateCTo(int angle){
+		if(angle>0){
+			while(angle>0){
+				int move = 1;
+				Motor.C.rotate(move);
+				angle=angle-move;
+			}
+		}
+		if(angle<0){
+			while(angle<0){
+				int move = -1;
+				Motor.C.rotate(move);
+				angle=angle+move;
+			}
+		}
+	}
+	
+	public static void slowRotateDTo(int angle){
+		if(angle>0){
+			while(angle>0){
+				int move = 1;
+				Motor.D.rotate(move);
+				angle=angle-move;
+			}
+		}
+		if(angle<0){
+			while(angle<0){
+				int move = -1;
+				Motor.D.rotate(move);
+				angle=angle+move;
+			}
+		}
+	}
+}
